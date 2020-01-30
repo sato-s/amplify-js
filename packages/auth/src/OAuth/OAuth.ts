@@ -68,7 +68,7 @@ export default class OAuth {
 			| string = CognitoHostedUIIdentityProvider.Cognito,
 		customState?: string
 	) {
-		const generatedState = this._generateState(32);
+		const generatedState = this._generateState(10);
 		const state = customState
 			? `${generatedState}-${customState}`
 			: generatedState;
